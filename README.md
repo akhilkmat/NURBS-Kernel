@@ -60,7 +60,6 @@ Open the resulting `.vtk` file in ParaView (File > Open > Apply). Enable normals
 
 - Basis function evaluation and first-order analytic derivatives checked against central finite differences across non-uniform control point weights.
 - Second-order derivatives checked the same way; verified correct away from repeated/interior knots. Near a simple interior knot on a degree-2 patch, the analytic second derivative shows a genuine jump rather than matching a central finite difference straddling the knot, this is mathematically expected (a degree-*p* B-spline only guarantees C^(p-1) continuity at a simple knot, so degree 2 guarantees C1, not C2), not a bug.
-- A subtle quotient-rule indexing error (an incorrect term being skipped when assembling the rational surface derivative) was caught via finite-difference testing with non-uniform weights and corrected; the fix is covered by the verification above.
 
 ## Known limitations
 
