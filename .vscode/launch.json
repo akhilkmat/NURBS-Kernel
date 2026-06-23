@@ -1,0 +1,20 @@
+{
+    "name": "Debug executable 'nurbs-surface'",
+    "type": "lldb",
+    "request": "launch",
+    "cargo": {
+        "args": [
+            "build",
+            "--bin=nurbs-surface"
+        ]
+    },
+    // 👇 FIX: Remove "--input" completely and just pass clean positional parameters!
+    "args": [
+        "direct", 
+        "inputs/examples/default_script.toml",
+        "outputs/debug_surface.vtk",
+        "32",
+        "32"
+    ],
+    "cwd": "${workspaceFolder}"
+}

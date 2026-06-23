@@ -1,0 +1,6 @@
+# Simple key = value input (lists/matrices will come later)
+# change 'mesh' sizes in the cli.rs file default is 32x32
+method = "interpolated"
+name = "cubic_surface"
+degree_u = 3
+degree_v = 3
